@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="220.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StartView">
+   <children>
+      <Text fill="#a8a0a0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="600.13671875">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Text>
+      <Button defaultButton="true" layoutX="10.0" layoutY="70.0" mnemonicParsing="false" onAction="#createProject" prefHeight="25.0" prefWidth="586.0" text="Create new project" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="60.0" />
+      <Button layoutX="10.0" layoutY="118.0" mnemonicParsing="false" onAction="#openProject" prefHeight="25.0" prefWidth="586.0" text="Open project" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="90.0" />
+      <Button layoutX="8.0" layoutY="164.0" mnemonicParsing="false" onAction="#openSettings" prefHeight="25.0" prefWidth="586.0" text="Program settings" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="120.0" />
+      <Button layoutX="10.0" layoutY="214.0" mnemonicParsing="false" onAction="#openAbout" prefHeight="25.0" prefWidth="592.0" text="About" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="150.0" />
+      <Button cancelButton="true" layoutX="274.0" layoutY="269.0" mnemonicParsing="false" onAction="#exit" text="Exit" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="180.0" />
+   </children>
+</AnchorPane>

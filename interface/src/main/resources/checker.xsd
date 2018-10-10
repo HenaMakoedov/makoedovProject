@@ -1,0 +1,427 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="COLUMN">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="column_comment" use="optional"/>
+                    <xs:attribute type="xs:string" name="column_default" use="optional"/>
+                    <xs:attribute type="xs:string" name="column_key" use="optional"/>
+                    <xs:attribute type="xs:string" name="column_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="data_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="extra" use="optional"/>
+                    <xs:attribute type="xs:string" name="is_nullable" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:string" name="privileges" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="COLUMNS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="COLUMN" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PRIMARY_KEYS">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="PRIMARY_KEY" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="INDEXES">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="INDEX" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="FOREIGN_KEYS">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="FOREIGN_KEY" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="TRIGGERS">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="TRIGGER" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="TRIGGER">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="action_condition" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_statement" use="optional"/>
+                    <xs:attribute type="xs:string" name="definer" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_orientation" use="optional"/>
+                    <xs:attribute type="xs:string" name="created" use="optional"/>
+                    <xs:attribute type="xs:string" name="event_manipulation" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_reference_old_table" use="optional"/>
+                    <xs:attribute type="xs:string" name="event_object_table" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_connection" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_reference_old_row" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_timing" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_order" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_set_client" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_reference_new_table" use="optional"/>
+                    <xs:attribute type="xs:string" name="event_object_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="sql_mode" use="optional"/>
+                    <xs:attribute type="xs:string" name="trigger_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="action_reference_new_row" use="optional"/>
+                    <xs:attribute type="xs:string" name="database_collation" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="event_object_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="trigger_catalog" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+
+
+    <xs:element name="PRIMARY_KEY">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="constraint_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="constraint_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="constraint_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:string" name="position_in_unique_constraint" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_column_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_table_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="INDEX">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:byte" name="cardinality" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation" use="optional"/>
+                    <xs:attribute type="xs:string" name="column_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="columns" use="optional"/>
+                    <xs:attribute type="xs:string" name="comment" use="optional"/>
+                    <xs:attribute type="xs:string" name="index_comment" use="optional"/>
+                    <xs:attribute type="xs:string" name="index_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="index_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:byte" name="non_unique" use="optional"/>
+                    <xs:attribute type="xs:string" name="nullable" use="optional"/>
+                    <xs:attribute type="xs:string" name="packed" use="optional"/>
+                    <xs:attribute type="xs:byte" name="seq_in_index" use="optional"/>
+                    <xs:attribute type="xs:string" name="sub_part" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FOREIGN_KEY">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="column_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="constraint_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="constraint_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="delete_rule" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:byte" name="position_in_unique_constraint" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_column_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="referenced_table_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="update_rule" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TABLE">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="COLUMNS" minOccurs="0"/>
+                <xs:element ref="PRIMARY_KEYS" minOccurs="0"/>
+                <xs:element ref="INDEXES" minOccurs="0"/>
+                <xs:element ref="FOREIGN_KEYS" minOccurs="0"/>
+                <xs:element ref="TRIGGERS" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="auto_increment" use="optional"/>
+            <xs:attribute type="xs:short" name="avg_row_length" use="optional"/>
+            <xs:attribute type="xs:string" name="check_time" use="optional"/>
+            <xs:attribute type="xs:string" name="checksum" use="optional"/>
+            <xs:attribute type="xs:string" name="create_options" use="optional"/>
+            <xs:attribute type="xs:string" name="create_time" use="optional"/>
+            <xs:attribute type="xs:byte" name="data_free" use="optional"/>
+            <xs:attribute type="xs:int" name="data_length" use="optional"/>
+            <xs:attribute type="xs:string" name="engine" use="optional"/>
+            <xs:attribute type="xs:int" name="index_length" use="optional"/>
+            <xs:attribute type="xs:byte" name="max_data_length" use="optional"/>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="row_format" use="optional"/>
+            <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+            <xs:attribute type="xs:string" name="table_collation" use="optional"/>
+            <xs:attribute type="xs:string" name="table_comment" use="optional"/>
+            <xs:attribute type="xs:byte" name="table_rows" use="optional"/>
+            <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+            <xs:attribute type="xs:string" name="table_type" use="optional"/>
+            <xs:attribute type="xs:string" name="update_time" use="optional"/>
+            <xs:attribute type="xs:byte" name="version" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VIEW">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="character_set_client" use="optional"/>
+                    <xs:attribute type="xs:string" name="check_option" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_connection" use="optional"/>
+                    <xs:attribute type="xs:string" name="definer" use="optional"/>
+                    <xs:attribute type="xs:string" name="is_updatable" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="security_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="table_schema" use="optional"/>
+                    <xs:attribute type="xs:string" name="view_definition" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PROCEDURE_PARAMETER">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="data_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="dtd_identifier" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:string" name="parameter_mode" use="optional"/>
+                    <xs:attribute type="xs:string" name="routine_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PROCEDURE_PARAMETERS">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="PROCEDURE_PARAMETER" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PROCEDURE">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="PROCEDURE_PARAMETERS" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+            <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+            <xs:attribute type="xs:string" name="character_set_client" use="optional"/>
+            <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+            <xs:attribute type="xs:string" name="collation_connection" use="optional"/>
+            <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+            <xs:attribute type="xs:string" name="created" use="optional"/>
+            <xs:attribute type="xs:string" name="data_type" use="optional"/>
+            <xs:attribute type="xs:string" name="database_collation" use="optional"/>
+            <xs:attribute type="xs:string" name="definer" use="optional"/>
+            <xs:attribute type="xs:string" name="dtd_identifier" use="optional"/>
+            <xs:attribute type="xs:string" name="external_language" use="optional"/>
+            <xs:attribute type="xs:string" name="external_name" use="optional"/>
+            <xs:attribute type="xs:string" name="is_deterministic" use="optional"/>
+            <xs:attribute type="xs:string" name="last_altered" use="optional"/>
+            <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+            <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+            <xs:attribute type="xs:string" name="parameter_style" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_body" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_catalog" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_comment" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_definition" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_schema" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_type" use="optional"/>
+            <xs:attribute type="xs:string" name="security_type" use="optional"/>
+            <xs:attribute type="xs:string" name="specific_name" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_data_access" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_mode" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_path" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTION_RETURN">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="data_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="dtd_identifier" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:string" name="parameter_mode" use="optional"/>
+                    <xs:attribute type="xs:string" name="routine_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTION_PARAMETER">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+                    <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="data_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="dtd_identifier" use="optional"/>
+                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+                    <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+                    <xs:attribute type="xs:byte" name="ordinal_position" use="optional"/>
+                    <xs:attribute type="xs:string" name="parameter_mode" use="optional"/>
+                    <xs:attribute type="xs:string" name="routine_type" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_catalog" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_name" use="optional"/>
+                    <xs:attribute type="xs:string" name="specific_schema" use="optional"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTION_RETURNS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="FUNCTION_RETURN"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTION_PARAMETERS">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="FUNCTION_PARAMETER" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTION">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <xs:element ref="FUNCTION_RETURNS" minOccurs="0"/>
+                <xs:element ref="FUNCTION_PARAMETERS" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="character_maximum_length" use="optional"/>
+            <xs:attribute type="xs:string" name="character_octet_length" use="optional"/>
+            <xs:attribute type="xs:string" name="character_set_client" use="optional"/>
+            <xs:attribute type="xs:string" name="character_set_name" use="optional"/>
+            <xs:attribute type="xs:string" name="collation_connection" use="optional"/>
+            <xs:attribute type="xs:string" name="collation_name" use="optional"/>
+            <xs:attribute type="xs:string" name="created" use="optional"/>
+            <xs:attribute type="xs:string" name="data_type" use="optional"/>
+            <xs:attribute type="xs:string" name="database_collation" use="optional"/>
+            <xs:attribute type="xs:string" name="definer" use="optional"/>
+            <xs:attribute type="xs:string" name="dtd_identifier" use="optional"/>
+            <xs:attribute type="xs:string" name="external_language" use="optional"/>
+            <xs:attribute type="xs:string" name="external_name" use="optional"/>
+            <xs:attribute type="xs:string" name="is_deterministic" use="optional"/>
+            <xs:attribute type="xs:string" name="last_altered" use="optional"/>
+            <xs:attribute type="xs:string" name="name" use="optional"/>
+            <xs:attribute type="xs:string" name="numeric_precision" use="optional"/>
+            <xs:attribute type="xs:string" name="numeric_scale" use="optional"/>
+            <xs:attribute type="xs:string" name="parameter_style" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_body" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_catalog" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_comment" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_definition" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_schema" use="optional"/>
+            <xs:attribute type="xs:string" name="routine_type" use="optional"/>
+            <xs:attribute type="xs:string" name="security_type" use="optional"/>
+            <xs:attribute type="xs:string" name="specific_name" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_data_access" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_mode" use="optional"/>
+            <xs:attribute type="xs:string" name="sql_path" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="TABLES">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="TABLE" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="VIEWS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="VIEW" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="PROCEDURES">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="PROCEDURE" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="FUNCTIONS">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="FUNCTION" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="SCHEMA">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="TABLES"/>
+                <xs:element ref="VIEWS"/>
+                <xs:element ref="PROCEDURES"/>
+                <xs:element ref="FUNCTIONS"/>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="catalog_name"/>
+            <xs:attribute type="xs:string" name="default_character_set_name"/>
+            <xs:attribute type="xs:string" name="default_collation_name"/>
+            <xs:attribute type="xs:string" name="name"/>
+            <xs:attribute type="xs:string" name="sql_path"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

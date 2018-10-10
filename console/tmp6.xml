@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root number="one" position="root">
+    <second number="two">
+        <sixth number="six">node6</sixth>
+        <fifth number="five">node5</fifth>
+    </second>
+    <third number="tree">
+        <seventh number="seven">node7</seventh>
+    </third>
+    <fourth number="four">node4</fourth>
+</root>

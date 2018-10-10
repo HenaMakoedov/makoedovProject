@@ -1,0 +1,12 @@
+.metadata/
+RemoteSystemsTempFiles/
+.idea
+target
+.project
+.classpath
+.settings/
+/installer/tmp
+/ParserUiHistory.xml
+packAndTest.bat
+*/target
+out/

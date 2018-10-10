@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HelpView">
+   <children>
+      <TabPane layoutX="10.0" layoutY="95.0" prefHeight="744.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <tabs>
+          <Tab text="About program">
+               <content>
+                  <AnchorPane prefHeight="582.0" prefWidth="688.0">
+                     <children>
+                        <ScrollPane layoutX="13.0" layoutY="14.0" prefHeight="200.0" prefWidth="410.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="689.0" prefWidth="777.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This application allows users to connect to the Mysql database, shows the database objects tree, shows information about different entities, generates database script and script of each database object, there is also the possibility  save and load the project." wrappingWidth="700.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="14.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Created by Hennadii Makoiedov under the DBBest company, how practical assignment. If you have something problems, please tell me about this to mail hennadii.makoedov@gmail.com" wrappingWidth="700.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <effect>
+                              <ColorAdjust brightness="-0.05" contrast="-0.05" />
+                           </effect>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Quick start">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="696.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1520.0" prefWidth="778.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The application always starts with the" AnchorPane.bottomAnchor="683.37890625" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="460.5205078125" AnchorPane.topAnchor="10.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="251.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="start menu." underline="true" AnchorPane.bottomAnchor="682.486328125" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="460.5205078125" AnchorPane.topAnchor="10.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="startViewImg" fitHeight="286.0" fitWidth="629.0" layoutX="79.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="40.0" />
+                                    <Text layoutX="15.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you use the program for the first time, you need to create a new project for the beginning by clicking on the menu item &quot;create a new project&quot;." wrappingWidth="700.0" AnchorPane.leftAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="15.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next you will see a window connecting to the database where you will need to enter the correct data and click the Connect button." wrappingWidth="700.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="connectionViewImg" fitHeight="399.0" fitWidth="475.0" layoutX="127.0" layoutY="436.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+                                    <Text layoutX="19.0" layoutY="905.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After that you will see the main window for working with the database objects tree." wrappingWidth="700.0" AnchorPane.leftAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="18.0" layoutY="933.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to get information about the database object, you need to select this object in the element tree by clicking on it. If you want to download the full information about the object you need to do a double click on the database object." wrappingWidth="700.0" AnchorPane.leftAnchor="15.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="mainViewImg" fitHeight="500.0" fitWidth="750.0" layoutX="22.0" layoutY="1007.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="1007.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <effect>
+                              <ColorAdjust brightness="-0.05" contrast="-0.05" />
+                           </effect>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+          </Tab>
+            <Tab text="Main Features">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="1.0" layoutY="1.0" prefHeight="708.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1108.0" prefWidth="767.0">
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The program has several basic features:" wrappingWidth="645.13671875" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="14.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1)The program can generate a script for the main database entities. To do this, you need to select the object database, go to the Action menu or right-click on this object, and click on the item &quot;generete object script&quot;. After selecting the file path, a file with the script of the selected database object will be created." wrappingWidth="700.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="saveObjectScriptActionImg" fitHeight="300.0" fitWidth="460.0" layoutX="147.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="150.0" />
+                                    <ImageView fx:id="saveObjectScriptRightClickImg" fitHeight="300.0" fitWidth="460.0" layoutX="135.0" layoutY="468.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="172.0" />
+                                    <Text layoutX="25.0" layoutY="815.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2)The program can generate a script for the entire database. To do this, you need to go to the &quot;File&quot; menu and click on &quot;Save the database script&quot; After selecting the file path, the .txt file with the base script will be created." wrappingWidth="700.0" AnchorPane.leftAnchor="25.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fx:id="saveDBScriptImg" fitHeight="182.0" fitWidth="410.0" layoutX="141.0" layoutY="866.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="141.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <effect>
+                              <ColorAdjust brightness="-0.05" contrast="-0.05" />
+                           </effect>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Additional Features">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="776.0" prefWidth="763.0" />
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Offline Mode">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Settings">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="748.0" layoutY="761.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="71.0" text="OK" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

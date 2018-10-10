@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ReconnectView">
+    <children>
+        <GridPane layoutX="1.0" layoutY="60.0" prefHeight="181.0" prefWidth="439.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="75.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="297.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="69.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="85.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="204.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="214.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="URL">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="User" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Password" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="DB name" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="url" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="user" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </PasswordField>
+                <TextField fx:id="DBName" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </TextField>
+                <CheckBox fx:id="checkBox" mnemonicParsing="false" text="Empty" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Label text="Port" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="port" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </TextField>
+            </children>
+        </GridPane>
+        <BorderPane layoutX="1.0" layoutY="240.0" prefHeight="37.0" prefWidth="439.0">
+            <right>
+                <Button defaultButton="true" mnemonicParsing="false" onAction="#confirm" text="Confirm" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets right="20.0" top="25.0" />
+                    </BorderPane.margin>
+                </Button>
+            </right>
+            <center>
+                <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="58.0" text="Cancel" BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="280.0" top="25.0" />
+                    </BorderPane.margin>
+                </Button>
+            </center>
+        </BorderPane>
+      <Text layoutX="1.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm the password" textAlignment="CENTER" wrappingWidth="439.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <ProgressBar fx:id="progressBar" layoutX="12.0" layoutY="268.0" prefHeight="18.0" prefWidth="262.0" />
+    </children>
+</Pane>
